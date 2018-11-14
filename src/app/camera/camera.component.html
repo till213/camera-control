@@ -1,0 +1,7 @@
+<p>
+  camera works!
+</p>
+<button (click)="toggle()">Toggle</button>
+<div>
+  <img #img width="720" height="480" src="{{liveUri}}" (click)="focus($event.clientX - img.getBoundingClientRect().left, $event.clientY - img.getBoundingClientRect().top)" />
+</div>

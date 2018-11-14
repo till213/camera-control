@@ -1,0 +1,29 @@
+<p>
+  photo-viewer works!
+</p>
+
+<div>
+  <button (click)="fetchThumbnails()">Fetch</button>
+  <table>
+    <tr>
+      <td>Dir</td>
+    </tr>
+    <ng-container *ngFor="let dir of reply?.dirs">
+      <tr>
+        <td>
+          <h2>Directory {{dir.name}}</h2>
+          <div class="previewContainer">
+            <ng-container *ngFor="let photo of dir.files">
+              <div class="previewItem" (click)="showDetails(dir.name, photo)">
+                <div><img src="http://192.168.0.1/v1/photos/{{dir.name}}/{{photo}}?size=thumb" /></div>
+                <div><a href="http://192.168.0.1/v1/photos/{{dir.name}}/{{photo}}">Download</a></div>
+              </div>
+            </ng-container>
+          </div>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+
+<app-photo-info></app-photo-info>

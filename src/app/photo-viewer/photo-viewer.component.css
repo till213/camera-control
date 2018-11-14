@@ -1,0 +1,10 @@
+.previewContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.previewItem {
+    border: solid 1px;
+    padding: 5px;
+    margin: 10px;
+}
