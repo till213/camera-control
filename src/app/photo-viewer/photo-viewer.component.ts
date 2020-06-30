@@ -12,7 +12,8 @@ import { PhotoInfoComponent } from '../components/photo-info/photo-info.componen
 })
 export class PhotoViewerComponent implements OnInit {
 
-  @ViewChild(PhotoInfoComponent) photoInfoComponent: PhotoInfoComponent;
+  @ViewChild(PhotoInfoComponent, {static:false})
+  photoInfoComponent: PhotoInfoComponent;
   reply: PhotosReply;
 
   constructor(private camera: CameraService) { }
