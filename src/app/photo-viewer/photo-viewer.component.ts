@@ -13,8 +13,8 @@ import { PhotoInfoComponent } from '../components/photo-info/photo-info.componen
 export class PhotoViewerComponent implements OnInit {
 
   @ViewChild(PhotoInfoComponent, {static:false})
-  photoInfoComponent: PhotoInfoComponent;
-  reply: PhotosReply;
+  photoInfoComponent: PhotoInfoComponent | undefined;
+  reply: PhotosReply | undefined;
 
   constructor(private camera: CameraService) { }
 
@@ -26,7 +26,7 @@ export class PhotoViewerComponent implements OnInit {
 
   showDetails(directory: string, file: string) {
     console.log('Details for: ' + directory + '/' + file);
-    this.photoInfoComponent.showInfo(directory + '/' + file);
+    this.photoInfoComponent?.showInfo(directory + '/' + file);
   }
 
 }

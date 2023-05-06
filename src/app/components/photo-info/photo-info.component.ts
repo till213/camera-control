@@ -9,8 +9,8 @@ import { CameraService } from '../../camera.service';
 })
 export class PhotoInfoComponent implements OnInit {
 
-  private photoPath: string;
-  photoUri: string;
+  private photoPath: string | undefined;
+  photoUri: string | undefined;
   constructor(private camera: CameraService) { }
 
   ngOnInit() {

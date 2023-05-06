@@ -1,7 +1,7 @@
 import { CameraDirectory } from './camera-directory';
 
 export class PhotosReply {
-    errCode: number;
-    errMsg: string;
-    dirs: CameraDirectory[];
+    errCode: number | undefined;
+    errMsg: string | undefined;
+    dirs: CameraDirectory[] = [];
 }
